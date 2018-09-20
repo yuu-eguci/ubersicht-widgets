@@ -3,7 +3,7 @@
 # options to set
 appearance =
   secDigit: true
-  secHand : true
+  secHand : false
   milTime : true
   showAMPM: false
 
@@ -13,15 +13,17 @@ command: "date +%H,%M,%S"
 
 refreshFrequency: 1000
 
+# <marker id="sec-mk" markerHeight="10" markerWidth="5" refX="0" refY="5" orient="auto">
+#   <polygon points="0,0 0,10 5,5"/>
+# </marker>
+# <marker id="hr-mk" markerHeight="10" markerWidth="5" refX="0" refY="5" orient="auto">
+#   <polygon points="0,0 0,10 5,5"/>
+# </marker>
+
 render: (output) -> """
 <svg version="1.1" id="clock" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 215 215" enable-background="new 0 0 215 215" xml:space="preserve">
   <defs>
-    <marker id="sec-mk" markerHeight="10" markerWidth="5" refX="0" refY="5" orient="auto">
-      <polygon points="0,0 0,10 5,5"/>
-    </marker>
-    <marker id="hr-mk" markerHeight="10" markerWidth="5" refX="0" refY="5" orient="auto">
-      <polygon points="0,0 0,10 5,5"/>
-    </marker>
+    # 秒針分針の位置が狂うからいっそ消した。(↑のやつ)
   </defs>
 
   <path id="min-ln" stroke-width="15" stroke-miterlimit="10" d="M107.5,7.5c55.2,0,100,44.8,100,100s-44.8,100-100,100s-100-44.8-100-100S52.3,7.5,107.5,7.5"/>
