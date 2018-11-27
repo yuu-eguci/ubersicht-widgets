@@ -22,6 +22,7 @@ style: """
     background-color: rgba(black, .5)
     padding: 10px
     width: 500px
+    padding: 20px
 
   table
     border-collapse: collapse

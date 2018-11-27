@@ -34,7 +34,7 @@ style: """
 
   // Position this where you want
   top 10px
-  left 603px
+  left 630px
 
   // Statistics text settings
   color #fff

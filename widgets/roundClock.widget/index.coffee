@@ -83,6 +83,9 @@ style: """
   background: background
   border-radius: 112.5px * scale
 
+  /* たまにカレンダーの後ろにいっちゃうから。 */
+  z-index: 1
+
   svg
     width: 215px * scale
     height: 215px * scale
